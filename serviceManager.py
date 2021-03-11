@@ -20,7 +20,7 @@ class sessionManager():
         session key value shouldn't be None
         session key exist in sessionList as well
         """
-        currentTime = 12
+        currentTime = time.time()
         if self.sessionManagement[sessionKey] and currentTime - self.sessionManagement[sessionKey] <= self.configTime:
             self.sessionManagement[sessionKey] = currentTime
             return True
